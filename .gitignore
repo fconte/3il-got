@@ -33,13 +33,4 @@ $RECYCLE.BIN/
 Thumbs.db
 UserInterfaceState.xcuserstate
 
-
-src/
-e2e/
-typings
-angular.json
-ionic.config.json
-package-lock.json
-package.json
-tsconfig.json
-tslint.json
+src/app/services/
