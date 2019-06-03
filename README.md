@@ -5,6 +5,7 @@ Préambule
 * ```ionic g page pages/detail```
 * Dans le fichier ```src/app/app-routing.module.ts``` supprimer la ligne faisant référence à ```./home/home.module#HomePageModule```
 * Supprimer le dossier ```src/app/home```
+* Définir les interfaces ```ìnterfaces/character.interface.ts``` et ```ìnterfaces/house.interface.ts```
 
 Première partie - Récupération des données depuis internet et premier affichage
 ===
