@@ -48,6 +48,6 @@ Aide:
 
 
 home.page.ts - Lien avec le data service
-====
+---
 * Dans home.page.ts, injecter dans le constructeur le dataService précédemment créé.
 * Se subscribe à dataLoaded (et penser à s’unsuscribe). Lorsque dataLoaded vaut TRUE, alors affecter aux variables locales characters et houses du service.
