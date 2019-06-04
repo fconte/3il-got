@@ -4,4 +4,13 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content padding=true>
+  <div *ngFor="let house of houses">
+    <div *ngIf="filterCharacters(house).length > 0">
+      <h1>{{ house.name }}</h1>
+      <ul>
+        <li *ngFor="let character of filterCharacters(house)">{{ character.name }}</li>
+      </ul>
+    </div>
+  </div>
+</ion-content>
