@@ -6,6 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { HomePage } from './home.page';
+import { HouseGalleryComponent } from '../../components/house-gallery/house-gallery.component';
+import { LazyLoadImageModule, intersectionObserverPreset } from 'ng-lazyload-image';
 
 const routes: Routes = [
   {
@@ -17,10 +19,13 @@ const routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
+    LazyLoadImageModule.forRoot({
+      preset: intersectionObserverPreset
+    }),
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [HomePage]
+  declarations: [HomePage, HouseGalleryComponent]
 })
-export class HomePageModule {}
+export class HomePageModule { }

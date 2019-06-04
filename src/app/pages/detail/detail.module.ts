@@ -9,7 +9,7 @@ import { DetailPage } from './detail.page';
 
 const routes: Routes = [
   {
-    path: '',
+    path: ':id',
     component: DetailPage
   }
 ];
@@ -23,4 +23,4 @@ const routes: Routes = [
   ],
   declarations: [DetailPage]
 })
-export class DetailPageModule {}
+export class DetailPageModule { }

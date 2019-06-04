@@ -1,0 +1,6 @@
+<ion-slides pager="false" [options]="slideOpts">
+  <ion-slide *ngFor="let character of characters" routerLink="/detail/{{character.id}}">
+    <div class="picture" [defaultImage]="'https://www.cleyade.com/wp-content/uploads/2019/01/unknown_person.jpg'"
+      [lazyLoad]="character.picture"></div>
+  </ion-slide>
+</ion-slides>

@@ -1,9 +1,18 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>detail</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title *ngIf="character">{{character.name}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-content *ngIf="character">
+    <div class="header-image" [style.background-image]="'url(' + character.picture + ')'"></div>
+    <div class="main-content" padding>
+      <p>{{character.description}}</p>
+    </div>
 
+  </ion-content>
 </ion-content>
