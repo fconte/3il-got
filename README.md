@@ -67,11 +67,11 @@ Création du composant HouseGallery
 1. Créer le composant HouseGallery
 ```ionic g component components/houseGallery --no-specs```
 
-2. Déclarer le tableau déclarations du module  ```home.module.ts```  le composant ```HouseGalleryComponent``` précédemment créé
+2. Déclarer dans le tableau déclarations du module  ```home.module.ts```  le composant ```HouseGalleryComponent``` précédemment créé
 
 
 3. Dans le composant ```HouseGalleryComponent```, définir un Input de type Character[]. L'Input permet de passer au composant des données (voir https://angular.io/guide/component-interaction#pass-data-from-parent-to-child-with-input-binding)
-4. Dans ```house-gallery.component.html```, mettre le ul sur les characters précedemment créé dans ```home.page.html```. Remplacer ```filterCharacters(house)``` par la variable définie comme Input
+4. Dans ```house-gallery.component.html```, mettre le ul sur les characters précedemment créés dans ```home.page.html```. Remplacer ```filterCharacters(house)``` par la variable définie comme Input
 5. Dans ```home.page.html```, supprimer le ul qui se trouve désormais dans ```house-gallery.component.html``` et le remplacer par le composant ```<app-house-gallery [characters]="filterCharacters(house)"></app-house-gallery>```
 6. Vérifier que la liste des personnages est bien affichée pour chaque maison
 
