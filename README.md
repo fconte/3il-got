@@ -45,6 +45,7 @@ Aide:
 
 * Regarder l’exemple 1: https://www.learnrxjs.io/operators/combination/forkjoin.html, cela permet d’être sur que les deux fichiers sont récupérés
 * Penser à typer le retour attendu d’une requête: this.http.get<MonObjetAttendu>(url)
+* On souhaite avoir le resultat une seule fois. Penser à utiliser l'observable en tant que promesse
 * Penser à émettre une nouvelle valeur pour dataLoaded
 
 
