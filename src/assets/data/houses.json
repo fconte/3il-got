@@ -1,0 +1,54 @@
+[
+    {
+        "id": 1,
+        "name": "Maison Arryn"
+    },
+    {
+        "id": 2,
+        "name": "Maison Lannister"
+    },
+    {
+        "id": 3,
+        "name": "Maison Baratheon"
+    },
+    {
+        "id": 4,
+        "name": "Maison Bolton"
+    },
+    {
+        "id": 5,
+        "name": "Maison Frey"
+    },
+    {
+        "id": 6,
+        "name": "Maison Greyjoy"
+    },
+    {
+        "id": 7,
+        "name": "Maison Martell"
+    },
+    {
+        "id": 8,
+        "name": "Maison Stark"
+    },
+    {
+        "id": 9,
+        "name": "Maison Targaryen"
+    },
+    {
+        "id": 10,
+        "name": "Maison Tully"
+    },
+    {
+        "id": 11,
+        "name": "Maison Tyrell"
+    },
+    {
+        "id": 12,
+        "name": "Garde de Nuit"
+    },
+    {
+        "id": 13,
+        "name": "Sauvageons"
+    }
+]
