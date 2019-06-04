@@ -40,7 +40,7 @@ La listes des maisons est disponible à cette adresse: https://3il-got.s3.eu-wes
 
 La listes des personnages est disponible à cette adresse : https://3il-got.s3.eu-west-3.amazonaws.com/characters.json
 
-Dans le constructeur, écrire le code pour récupérer la liste des maisons et la liste des personnages et les affecter dans leurs variables respectives.
+Dans le constructeur du data.service, écrire le code pour récupérer la liste des maisons et la liste des personnages et les affecter dans leurs variables respectives.
 
 Aide: 
 
