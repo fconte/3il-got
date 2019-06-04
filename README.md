@@ -78,7 +78,7 @@ Création du composant HouseGallery
 Mise en place du ion-slides
 ---
 
-1. Installer la dépendance ng-lazyload-image (```npm install ng-lazyload-image``)
+1. Installer la dépendance ng-lazyload-image (```npm install ng-lazyload-image```)
 2. Dans le module home.module.ts ajouter ```import { LazyLoadImageModule, intersectionObserverPreset } from 'ng-lazyload-image';```
 puis dans l'import 
 ```
