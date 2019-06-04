@@ -30,8 +30,9 @@ Créer le service avec la commande
 	- houses (public) qui est un tableau de House
 	- dataLoaded qui est un BehaviorSubject de type boolean (https://www.learnrxjs.io/subjects/behaviorsubject.html)
 
-Dans le fichier src/app/app.module.ts, dans le module, spécifier qu’il doit importer HttpClientModule ( depuis @angular/common/http)  (juste après BrowserModule)
-Injecter private http: HttpClient (depuis @angular/common/http)  dans le constructeur
+- Dans le fichier src/app/app.module.ts, dans le module, spécifier qu’il doit importer HttpClientModule ( depuis @angular/common/http)  (juste après BrowserModule)
+
+- Injecter private http: HttpClient (depuis @angular/common/http)  dans le constructeur du data.service
 
 
 
@@ -39,12 +40,13 @@ La listes des maisons est disponible à cette adresse: https://3il-got.s3.eu-wes
 
 La listes des personnages est disponible à cette adresse : https://3il-got.s3.eu-west-3.amazonaws.com/characters.json
 
-Dans le constructeur, écrire le code pour récupérer la liste des maisons et la liste des personnages et les affecter dans leurs variables respectives.
+Dans le constructeur du data.service, écrire le code pour récupérer la liste des maisons et la liste des personnages et les affecter dans leurs variables respectives.
 
 Aide: 
 
 * Regarder l’exemple 1: https://www.learnrxjs.io/operators/combination/forkjoin.html, cela permet d’être sur que les deux fichiers sont récupérés
 * Penser à typer le retour attendu d’une requête: this.http.get<MonObjetAttendu>(url)
+* On souhaite avoir le resultat une seule fois. Penser à utiliser l'observable en tant que promesse
 * Penser à émettre une nouvelle valeur pour dataLoaded
 
 
