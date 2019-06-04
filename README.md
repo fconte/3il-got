@@ -65,7 +65,7 @@ Création du composant HouseGallery
 ---
 
 1. Créer le composant HouseGallery
-```ionic g component app/components/houseGallery --no-specs```
+```ionic g component components/houseGallery --no-specs```
 
 2. Déclarer le tableau déclarations du module  ```home.module.ts```  le composant ```HouseGalleryComponent``` précédemment créé
 
