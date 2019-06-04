@@ -12,17 +12,53 @@ import { Character } from 'src/app/interfaces/character.interface';
 })
 export class HomePage implements OnInit, OnDestroy {
 
+  /**
+   * Maisons affichées
+   */
   public houses: House[];
+
+  /**
+   * Personnages affichés
+   */
   public characters: Character[];
 
-  // Liste de toutes les saisons
-  public seasons = [1, 2, 3, 4, 5, 6, 7, 8];
-  public seasonsSelected = [];
-
+  /**
+   * Subscription qui permet de savoir si les données sont chargées ou non
+   */
   private dataLoadedSubscription: Subscription;
+
+  /**
+   * Liste de toutes les saisons
+   */
+  public seasons = [1, 2, 3, 4, 5, 6, 7, 8];
+
+  /**
+   * Liste de toutes les saisons à prendre en compte dans le filtre
+   */
+  public seasonsSelected = [];
 
   constructor(public dataService: DataService) {
 
+  }
+
+  ngOnInit() {
+    // On enregitre la subscription pour pouvoir la détruire plus tard
+    this.dataLoadedSubscription = this.dataService.dataLoaded.subscribe(dataLoaded => {
+      // Si le dataService dit que les données sont disponibles
+      if (dataLoaded) {
+        // Alors on affecte à nos variables locales les données du dataService
+        this.characters = this.dataService.characters;
+        this.houses = this.dataService.houses;
+      }
+    });
+  }
+
+  ngOnDestroy(): void {
+    // Si la subscription existe
+    if (this.dataLoadedSubscription) {
+      // On la kill
+      this.dataLoadedSubscription.unsubscribe();
+    }
   }
 
   /**
@@ -42,6 +78,10 @@ export class HomePage implements OnInit, OnDestroy {
     }
   }
 
+  /**
+   * Retourne les personnages d'une maison
+   * @param house Maison dont on cherche les personnages
+   */
   filterCharacters(house: House) {
     // Retourne tous les personnages
     return this.characters.filter(character => {
@@ -63,22 +103,4 @@ export class HomePage implements OnInit, OnDestroy {
     }
     );
   }
-
-  ngOnInit() {
-    this.dataLoadedSubscription = this.dataService.dataLoaded.subscribe(dataLoaded => {
-      if (dataLoaded) {
-        this.characters = this.dataService.characters;
-        this.houses = this.dataService.houses;
-      }
-    });
-  }
-
-  ngOnDestroy(): void {
-    if (this.dataLoadedSubscription) {
-      this.dataLoadedSubscription.unsubscribe();
-    }
-  }
-
-
-
 }
