@@ -30,8 +30,9 @@ Créer le service avec la commande
 	- houses (public) qui est un tableau de House
 	- dataLoaded qui est un BehaviorSubject de type boolean (https://www.learnrxjs.io/subjects/behaviorsubject.html)
 
-Dans le fichier src/app/app.module.ts, dans le module, spécifier qu’il doit importer HttpClientModule ( depuis @angular/common/http)  (juste après BrowserModule)
-Injecter private http: HttpClient (depuis @angular/common/http)  dans le constructeur
+- Dans le fichier src/app/app.module.ts, dans le module, spécifier qu’il doit importer HttpClientModule ( depuis @angular/common/http)  (juste après BrowserModule)
+
+- Injecter private http: HttpClient (depuis @angular/common/http)  dans le constructeur du data.service
 
 
 
